@@ -1,5 +1,11 @@
 # Basic Routing
 
+## What is Routing?
+Routing describes the process of simulating different URLs to your client browser while staying on the same page, by loading different components depending on the URL entered.
+
+We use Angular to build single-page-applications. Loading different pages would go against that goal.
+
+---
 ## Defining Routes
 - Add a `RouterModule` (from `@angular/router`) to the `imports` section of the app module (`app.module.ts`).
 - Add `.forRoot` to this module and pass in a `Routes` array.
