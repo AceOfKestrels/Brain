@@ -39,3 +39,39 @@ ngOnInit() {
 }
 ```
 The function passed here will *not* be called when the component is first initialized, so the snapshot should be used to set the values initially.
+
+---
+## Query Parameters And Fragments
+Query Parameters (`?someParam=value`) and Fragments (`#something`) can be retrieved in a similar way to route parameters. 
+To do this, we can use the `snapshot.queryParams` and `snapshot.fragment` properties respectively, or subscribe to the `queryParams` and `fragment` observables to react when they are updated:
+
+Query Parameters:
+```js
+constructor( private currentRoute: ActivatedRoute ) {}
+listAllUsers: boolean;
+
+ngOnInit() {
+    this.listAllUsers = this.currentRoute.snapshot.queryParams["listAll"] === "true";
+
+    this.currentRoute.queryParams.subscribe(
+        (updatedParams) =>  {
+            this.listAllUsers = updatedParams["listAll"] === "true";
+        }
+    );
+}
+```
+Fragments:
+```js
+constructor( private currentRoute: ActivatedRoute ) {}
+currentPageSection: string;
+
+ngOnInit() {
+    this.currentPageSection = this.currentRoute.snapshot.fragment;
+
+    this.currentRoute.fragment.subscribe(
+        (updatedFragment) =>  {
+            this.currentPageSection = updatedFragment;
+        }
+    );
+}
+```
