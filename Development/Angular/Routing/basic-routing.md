@@ -3,7 +3,7 @@
 ## How to set up routing?
 ### Defining Routes
 - Add a `RouterModule` (from `@angular/router`) to the `imports` section of the app module (`app.module.ts`).
-- Add `.forChild` to this module and pass in a `Routes` array.
+- Add `.forRoot` to this module and pass in a `Routes` array.
 - This array can be defined directly here or as a `const` above the module.
 
 The above can also be put in a [separate module](#routing-as-a-separate-module)
@@ -23,5 +23,7 @@ The above can also be put in a [separate module](#routing-as-a-separate-module)
 TODO
 ```
 
-## Navigating with Router Links
-### TODO
+### See also
+- [Linking to Routes](basic-linking.md)
+- [Navigating Programmatically](navigating-programmatically.md)
+- [Route Parameters](route-parameters.md)
