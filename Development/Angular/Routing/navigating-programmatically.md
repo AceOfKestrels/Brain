@@ -44,18 +44,4 @@ loadUsersPage() {
 By default the `relativeTo` property is set to the root path.
 
 ## Query Parameters and Fragments
-Query Parameters (`?someParam=value`) and Fragments (`#something`) can be passed in addition to the path using the `queryParams` and `fragment` properties respectively.
-`queryParams` takes an object of key-value-pairs defining the parameters and their values. 
-Since only one fragmet may be passed, `fragment` is simply set to its value.
-```js
-listAllUsers() {
-    this.router.navigate( 
-        ["/users"], 
-        { 
-            queryParams: { listAll: true },
-            fragment: "userList"
-        } 
-    );
-}
-```
-This function will navigate to `[domain]/users?listAll=true#userList`.
+See [Query Parameters and Fragments](query-parameters-fragments.md#through-programmatic-navigation)

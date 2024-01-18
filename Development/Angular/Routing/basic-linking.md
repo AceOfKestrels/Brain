@@ -60,17 +60,7 @@ This behavior can be changed by binding to the `routerLinkActiveOptions` propert
 
 ---
 ## Passing Query Parameters and Fragmets
-Query Parameters (`?someParam=value`) and Fragments (`#something`) can be passed in addition to the path using the `queryParams` and `fragment` properties respectively.
-`queryParams` takes an object of key-value-pairs defining the parameters and their values. 
-Since only one fragmet may be passed, `fragment` is simply set to its value. Property binding is *not* required for fragments.
-```html
-<a 
-    routerLink="/users"
-    [queryParams]="{ listAll: true }"
-    fragment="userList"
->List All Users</a>
-```
-This link will load `[domain]/users?listAll=true#userList`.
+See [Query Parameters and Fragments](query-parameters-fragments.md#in-router-links)
 
 ---
 ## Examples
