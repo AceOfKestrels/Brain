@@ -33,6 +33,40 @@ listAllUsers() {
 This function will navigate to `[domain]/users?listAll=true#userList`.
 
 ---
+## Preserving Query Parameters and Fragments
+### Query Parameters
+To preserve query parameters, set the `queryParamsHandling` property to `"preserve"`:
+```html
+<a routerLink="/users/edit" queryParamsHandling="preserve">Edit User</a>
+```
+```js
+editUser() {
+    this.router.navigate(
+        ["/users/edit"],
+        {
+            queryParamsHandling: "preserve"
+        }
+    )
+}
+```
+
+### Fragments
+To preserve query parameters, set the `preserveFragment` property to `true`:
+```html
+<a routerLink="/users" preserveFragment="true">Users</a>
+```
+```js
+editUser() {
+    this.router.navigate(
+        ["/users"],
+        {
+            preserveFragment: true
+        }
+    )
+}
+```
+
+---
 ## Retrieving Query Parameters and Fragments
 Query Parameters and Fragments can be retrieved in a similar way to [route parameters](route-parameters.md). 
 To do this, we can use the `snapshot.queryParams` and `snapshot.fragment` properties respectively, or subscribe to the `queryParams` and `fragment` observables to react when they are updated:
