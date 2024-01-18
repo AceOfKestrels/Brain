@@ -105,3 +105,5 @@ export class AppRoutingModule {}
 - [Linking to Routes](basic-linking.md)
 - [Navigating Programmatically](navigating-programmatically.md)
 - [Route Parameters](route-parameters.md)
+- [Child/Nested Routes](child-routing.md)
+- [Route Guards](guards.md)
