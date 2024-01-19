@@ -122,7 +122,7 @@ ngOnDestroy() {
  
 ---
 ## RxJS
-Observables are prt of the `RxJS` package. If it is not installed already, use the following command to install it:
+Observables are part of the `RxJS` package. If it is not installed already, use the following command to install it:
 ```
 npn install --save  rxjs
 ```
