@@ -26,4 +26,104 @@ In the Reactive approach we can also check the validation state of a form contro
 
 ---
 ## Validation Classes
-Validation classes can be used in the same way as in the [Reactive approach](../Reactive/validation.md#validation-classes).
+Validation classes can be used in the same way as in the [Template-Driven approach](../Reactive/validation.md#validation-classes).
+
+---
+## Custom Validators
+While the built in validators already cover a lot of use cases, we can create custom ones as well.
+
+A validator is simply a method that takes the control it checks as an argument and returns an object containing a boolean under any `string` type name:
+```js
+userNameValidation(control: FormControl): {[s: string]: boolean} {
+    if( this.userNameTaken(control.value) ) {
+        return { "userNameTaken": true };
+    }
+    return null;
+}
+```
+Instead of returning an object with `false` in it, `null` needs to be returned if the input is valid.
+
+Then we can pass this method to the control. Make sure to bind `this` since it will be a different object calling the method:
+```js
+ngOnInit() {
+    this.form = new FormGroup({
+        "userName": new FormControl(undefined, [
+            Validators.required, 
+            this.userNameValidation.bind(this)
+        ]),
+        "email": new FormControl(undefined, [
+            Validators.required, 
+            Validators.email
+        ])
+    });
+}
+```
+
+### Validator Functions
+Instead of a validator method we can also pass an arrow function directly to the control. This way we also don't need to use `bind`:
+```js
+ngOnInit() {
+    this.form = new FormGroup({
+        "userName": new FormControl(undefined, [
+            Validators.required, 
+            (control) => this.userNameTaken(control.value) ? { userNameTaken: true } : null
+        ]),
+        "email":    new FormControl(undefined, [
+            Validators.required, 
+            Validators.email
+        ])
+    });
+}
+```
+
+### Asynchronous Validators
+Instead of an object, async validators should return a `Promise<any>` or `Observable<any>`:
+```js
+userNameValidationAsync(control: FormControl): 
+    Promise<any> | Observable<any> {
+        return new Promise<any>(
+            (resolve, reject) => {
+                setTimeout( () => {
+                    resolve( this.userNameTaken(control.value) ? { userNameTaken: true } : null );
+                }, 1500);
+            }
+        );
+}
+```
+Ansync validators are passed as the third argument to the `FormControl` constructor:
+```js
+ngOnInit() {
+    this.form = new FormGroup({
+        "userName": new FormControl(undefined, 
+            Validators.required, 
+            this.userNameValidationAsync.bind(this)
+        ),
+        "email": new FormControl(undefined, [
+            Validators.required, 
+            Validators.email
+        ])
+    });
+}
+```
+
+---
+## Error Codes
+When an input is invalid, an object containing an error code is returned. We can check this error code:
+```html
+<form [formGroup]="form">
+    <input type="text" id="name" formControlName="userName">
+    <span *ngif="form.get("userName").errors["usernameTaken"]" style="color: red">
+        User Name is already taken!
+    </span>
+    <span *ngif="form.get("userName").errors["required"]" style="color: red">
+        User Name is required!
+    </span>
+
+    <input type="text" id="email" formControlName="email">
+    <span *ngif="form.get("email").errors["required"]" style="color: red">
+        Email is required!
+    </span>
+
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>
+```
