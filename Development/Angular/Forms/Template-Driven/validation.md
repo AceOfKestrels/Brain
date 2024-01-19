@@ -21,6 +21,7 @@ On its own validation does not prevent a form from being submitted. We can check
 </form>
 ```
 
+---
 ## Validation Classes
 Angular automatically adds the `ng-valid` or `ng-invalid` classes to a form field depending on its validation state. These can be used to style the input fields conditionally:
 ```css
