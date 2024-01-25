@@ -17,18 +17,25 @@ Observers can be added by calling the `subscribe` method on an observable. This 
 
 ```js
 this.observable.subscribe(
-    data    => { console.log(data); },
-    error   => { console.log(error); },
-    ()      => { console.log("Completed"); }
+    {
+        next: (data) => console.log(data),
+        error: (error) => console.log(error),
+        complete: () => console.log("Completed")
+    }
 ); 
 ```
+When only subscribing to new data, a simplified syntax can be used:
+```js
+this.observable.subscribe( data => console.log(data) ); 
+```
 
-When an observable returns an error, it completes *without* calling the completion function.
+If an observable returns an error, it completes *without* calling the completion function.
 
 ### Operators
 Operators can be used to transform the data received through an observable. To add an operator to an observable, call the `pipe` method on it. The `pipe` method takes one or more operators as arguments and returns an observable that returns the transformed data:
 ```js
-let pipe = this.observable.pipe( map( (data: number) => {
+let pipe = this.observable.pipe( 
+    map( (data: number) => {
         return data + 1;
     } 
 ));
@@ -103,9 +110,11 @@ throwError() {
 }
 
 ngOnInit() {
-    this.onButtonClick.subscribe( 
-        ()      => { console.log("Button clicked!"); },
-        error   => { console.log(error); } 
+    this.onButtonClick.subscribe(
+        {
+            next: () => console.log("Button clicked!"),
+            error: (error) => console.log(error)
+        }
     );
 }
 ```
@@ -119,6 +128,16 @@ ngOnDestroy() {
     this.subscription.unsubscribe();
 }
 ```
+
+### Behavior Subjects
+Behavior Subjects are a special type of subject that also give new subscribers access to the previous value emitted. Unlike regular `Subject` it must be initialized with a starting value (that may be null):
+```js
+ngOnInit() {
+    const subject = new BehaviorSubjecct(0);
+    subject.subscribe( value => console.log(value) )
+}
+```
+On subscription, the defined function will immediately be called as if `next` was used.
  
 ---
 ## RxJS
