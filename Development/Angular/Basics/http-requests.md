@@ -65,11 +65,11 @@ get(id: int) : Observable<UserData> {
 ## Headers and Query Parameters
 All request methods on the `HttpClient` also take configurations to the reqeust as another parameter. Here, headers, query params and other things can be set:
 ```js
-post(item: { id: string, name: string }) {
+get(item: { id: string, name: string }) {
     let request = httpClient.get<UserData>(
         "https://example.com/api/", 
         {
-            headers: new HttpHeaders({ "Authorization": this.apiKey }),
+            headers: new HttpHeaders({ "Expect": "100-continue" }),
             params: new HttpParams().set("detail", "true")
         }
     );
