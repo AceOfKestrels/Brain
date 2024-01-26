@@ -44,6 +44,7 @@ Before deploying your application, make sure that it is tested properly and opti
 - [Components](./components.md)
 - [Databinding](./databinding.md)
 - [Lifecycle Hooks](./lifecycle-hooks.md)
+- [Services](./services.md)
 - [Observables](./observables.md)
 - [Pipes](./pipes.md)
 - [Routing](../Routing/index.md)
@@ -54,6 +55,5 @@ Before deploying your application, make sure that it is tested properly and opti
 - [Standalone Components](./standalone-components.md)
 
 ### Todo
-- Lifecycle Hooks
 - Services
 - Directives
