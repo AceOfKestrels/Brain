@@ -41,6 +41,7 @@ Before deploying your application, make sure that it is tested properly and opti
 
 ---
 ## Read on
+- [Components](./components.md)
 - [Databinding](./databinding.md)
 - [Lifecycle Hooks](./lifecycle-hooks.md)
 - [Observables](./observables.md)
@@ -57,4 +58,3 @@ Before deploying your application, make sure that it is tested properly and opti
 - Lifecycle Hooks
 - Services
 - Directives
-- Components?
