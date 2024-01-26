@@ -44,16 +44,16 @@ Before deploying your application, make sure that it is tested properly and opti
 - [Components](./components.md)
 - [Databinding](./databinding.md)
 - [Lifecycle Hooks](./lifecycle-hooks.md)
+- [Directives](../Directives/index.md)
 - [Services](./services.md)
 - [Observables](./observables.md)
 - [Pipes](./pipes.md)
 - [Routing](../Routing/index.md)
 - [HTTP Requests](../HTTP%20Requests/index.md)
+    - [Authentication](./authentication.md)
 - [Forms](../Forms/index.md)
-- [Authentication](./authentication.md)
 - [Modules](./modules.md)
 - [Standalone Components](./standalone-components.md)
 
 ### Todo
 - Services
-- Directives

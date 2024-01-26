@@ -124,3 +124,7 @@ export class ResponseLoggerInterceptorService implements HttpInterceptor {
     }
 }
 ```
+
+---
+## Read on
+Read [Authentication](./authentication.md) to see how we might use HTTP requests for authentication with a backend server.
