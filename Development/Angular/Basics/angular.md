@@ -1,10 +1,24 @@
 # Angular
 
 ## What is Angular?
-Angular is a JavaScript framework that allows for the creation of single-page web application.
+Angular is a TypeScript framework that allows for the creation of single-page web application.
 
 ---
-## Creating an Angular application
+## Getting Started
+To create a new Angular project, we use the Angular CLI, an offcial tool made by the Angular team. It can be installed using the `npm` packet manager:
+```
+npm install -g @angular/cli
+```
+
+NPM requires Node JS, so if you don't have that installed yet, download it from the [official website](https://nodejs.org/en) and install it first.
+
+With the CLI installed you can open a command prompt or terminal in the folder you want your project to be located in and use the `ng new` command:
+```
+ng new [project name] --no-strict
+```
+The `--no-strict` flag will make our lives a bit easier, but strict mode is required for some additional optimizations.
+
+After the project has been create, use the `ng serve` command in the newly created folder to start up the project in development mode.
 
 
 ---
