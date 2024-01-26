@@ -35,3 +35,4 @@ Before deploying your application, make sure that it is tested properly and opti
 - [HTTP Requests](../HTTP%20Requests/index.md)
 - [Forms](../Forms/index.md)
 - [Authentication](./authentication.md)
+- [Standalone Components](./standalone-components.md)
