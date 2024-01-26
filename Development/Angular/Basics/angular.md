@@ -54,7 +54,6 @@ Before deploying your application, make sure that it is tested properly and opti
 - [Standalone Components](./standalone-components.md)
 
 ### Todo
-- Databinding
 - Lifecycle Hooks
 - Services
 - Directives
