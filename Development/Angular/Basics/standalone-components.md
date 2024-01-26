@@ -65,7 +65,7 @@ The `AppModule` is now longer required at this point.
 
 ---
 ## Lazy Loading with Standalone Components
-Lazy Loading for standalone components can simply be enabled by using the `loadComponent` property and passing a loading function to it similarly to the `loadChildren` function (see [Lazy Loading](../Modules/lazy-loading.md) for more details):
+Lazy Loading for standalone components can simply be enabled by using the `loadComponent` property and passing a loading function to it similarly to the `loadChildren` function (see [Lazy Loading](./modules.md#lazy-loading) for more details):
 ```js
 const routes: Route[] = [
     { 
