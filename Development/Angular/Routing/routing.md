@@ -1,4 +1,4 @@
-# Basic Routing
+# Routing
 
 ## What is Routing?
 Routing describes the process of simulating different URLs to your client browser while staying on the same page, by loading different components depending on the URL entered.
