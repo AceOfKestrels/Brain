@@ -1,6 +1,8 @@
 # Animations
+Since we are constantly adding and removing elements from the DOM when working with Angular, it is difficult to build animations with CSS transitions alone. Angular offers its own animation framework however.
 
-To get started, we need to install the `@angular&animations` package:
+## Getting Started
+First we need to install the `@angular/animations` package:
 ```
 npm install --save @angular/animations
 ```
