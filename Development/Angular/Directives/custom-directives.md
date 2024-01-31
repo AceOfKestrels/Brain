@@ -43,7 +43,7 @@ export class HighlightDirective {
 ```
 
 &nbsp;
-Then we can use `ngOnInit` and other [lifecycle hooks](./lifecycle-hooks.md) to apply changes to the element:
+Then we can use `ngOnInit` and other [lifecycle hooks](../Basics/lifecycle-hooks.md) to apply changes to the element:
 ```js
 @Directive({
     selector: "[appHighlight]"
