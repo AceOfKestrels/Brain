@@ -14,9 +14,11 @@ NPM requires Node JS, so if you don't have that installed yet, download it from 
 
 With the CLI installed you can open a command prompt or terminal in the folder you want your project to be located in and use the `ng new` command:
 ```
-ng new [project name] --no-strict
+ng new [project name] --no-strict --standalone false
 ```
 The `--no-strict` flag will make our lives a bit easier, but strict mode is required for some additional optimizations.
+
+The `--standalone false` flag creates the project with an app module and non-standalone app component. Remove it if you wish to only use standalone components.
 
 After the project has been create, use the `ng serve` command in the newly created folder to start up the project in development mode.
 
