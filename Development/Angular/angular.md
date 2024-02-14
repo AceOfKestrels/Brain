@@ -59,5 +59,6 @@ Before deploying your application, make sure that it is tested properly and opti
 - [Forms](./Forms/forms.md)
 - [Modules](./modules.md)
 - [Server Side Rendering](./server-side-rendering.md)
+- [Service Workers](./service-workers.md)
 - [Standalone Components](./standalone-components.md)
 - [Signals](./signals.md)
