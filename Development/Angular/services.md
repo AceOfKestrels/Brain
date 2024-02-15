@@ -14,7 +14,6 @@ export class UserService {
 }
 ```
 
----
 ## Dependency Injection
 To make sure every component and class uses the same instance of a service we use [Dependency Injection](../../Concepts/dependency-injection.md). Angular will automatically inject services into the constructor of components as well as other services, as long as it knows how to create an instance of it. Simply add a parameter with the type of a service to the constructor:
 ```js

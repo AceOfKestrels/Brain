@@ -11,7 +11,6 @@ Angular offers several directives that automatically add validation to a form fi
 ```
 In this example we have a form with a username field that is required, and an email field that has to be a valid email address.
 
----
 ## Checking Validation State
 On its own validation does not prevent a form from being submitted. We can check the validation state however, and use it to disable the button on an invalid form for example:
 ```html
@@ -21,7 +20,6 @@ On its own validation does not prevent a form from being submitted. We can check
 </form>
 ```
 
----
 ## Validation Classes
 Angular automatically adds the `ng-valid` or `ng-invalid` classes to a form field depending on its validation state. These can be used to style the input fields conditionally:
 ```css

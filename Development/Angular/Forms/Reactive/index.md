@@ -34,7 +34,6 @@ Then for each form control, the property name in the object must be passed to th
 </form>
 ```
 
----
 ## Grouping Controls
 In the Reactive approach we can also group controls together. To do this, instead of passing a `FormControl` directly to our form object, we can wrap it in another `FormGroup`:
 ```js
@@ -59,7 +58,6 @@ Of course we also need to update our HTML code accordingly. The container wrappi
 </form>
 ```
 
----
 ## Form Controls
 Any HTML input uses the `FormControl` class in our form object. Its constructor takes the default value and different [validators](./validation.md) as parameters.
 ```js
@@ -93,7 +91,6 @@ For controls inside a form group, the path is seperated by `.`:
 </form>
 ```
 
----
 ## Form Arrays
 We can use form arrays to dynamically add or remove controls from a form. To do this we first add a `FormArray` object to our from object:
 ```js

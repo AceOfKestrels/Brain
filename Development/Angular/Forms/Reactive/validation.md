@@ -13,7 +13,6 @@ ngOnInit() {
 ```
 A single validators can be passed direct. Instead an array of validators can be passed to the constructor.
 
----
 ## Checking Valiation State
 In the Reactive approach we can also check the validation state of a form control or the form itself and react to it accordingly. Read about [Accessing Form Controls](./index.md#accessing-form-controls) to see how this works:
 ```html
@@ -24,11 +23,9 @@ In the Reactive approach we can also check the validation state of a form contro
 </form>
 ```
 
----
 ## Validation Classes
 Validation classes can be used in the same way as in the [Template-Driven approach](../Reactive/validation.md#validation-classes).
 
----
 ## Custom Validators
 While the built in validators already cover a lot of use cases, we can create custom ones as well.
 
@@ -106,7 +103,6 @@ ngOnInit() {
 }
 ```
 
----
 ## Error Codes
 When an input is invalid, an object containing an error code is returned. We can check this error code:
 ```html

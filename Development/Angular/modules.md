@@ -49,7 +49,6 @@ export class UsersModule {}
 ```
 The `UserListComponent` and `UserDetailComponent` exports were removed here because theye are no longer used in the `AppRoutingModule`.
 
----
 ## Shared Modules
 Sometimes features are used in multiple modules. To avoid code duplication it can help to bundle them together in a shared module that is then imported by the other ones. To make the building blocks defined in that module available in other modules they need to be exported:
 ```js
@@ -70,7 +69,6 @@ export class SharedModule {}
 ```
 Shared modules are especially useful if you want to use a component in different modules because building blocks can only be *declared* once, but a module can be *imported* into any other module.
 
----
 ## Lazy Loading
 Lazy Loading allows us to download components only when we actually access their respective route. This is an important feature to optimize loading times of our application. Any routes and components that should be loaded lazily need to be separated into a [feature module](#feature-modules). 
 

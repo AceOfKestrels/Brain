@@ -21,7 +21,6 @@ loadUsersPage() {
 }
 ```
 
----
 ## Relative Paths
 The `navigate` function doesn't "know" which path we are currently on, so to use relative paths we have to also pass the current path. 
 

@@ -14,7 +14,6 @@ Since only one fragmet may be passed, `fragment` is simply set to its value. Pro
 ```
 This link will load `[domain]/users?listAll=true#userList`.
 
----
 ## Through Programmatic Navigation
 Query Parameters and Fragments can be passed in addition to the path using the `queryParams` and `fragment` properties respectively.
 `queryParams` takes an object of key-value-pairs defining the parameters and their values. 
@@ -32,7 +31,6 @@ listAllUsers() {
 ```
 This function will navigate to `[domain]/users?listAll=true#userList`.
 
----
 ## Preserving Query Parameters and Fragments
 ### Query Parameters
 To preserve query parameters, set the `queryParamsHandling` property to `"preserve"`:
@@ -66,7 +64,6 @@ editUser() {
 }
 ```
 
----
 ## Retrieving Query Parameters and Fragments
 Query Parameters and Fragments can be retrieved in a similar way to [route parameters](route-parameters.md). 
 To do this, we can use the `snapshot.queryParams` and `snapshot.fragment` properties respectively, or subscribe to the `queryParams` and `fragment` observables to react when they are updated:
@@ -102,7 +99,6 @@ ngOnInit() {
 }
 ```
 
----
 ## See Also
 - [Router Links](basic-linking.md)
 - [Navigating Programmatically](navigating-programmatically.md)

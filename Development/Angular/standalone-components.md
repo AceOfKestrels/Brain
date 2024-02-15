@@ -12,7 +12,6 @@ Simply add the `standalone` property to the component and set it to `true`:
 export class UserListComponent { }
 ```
 
----
 ## Using Standalone Components
 In any component you want to use this in, add an `imports` property containing the standalone component, and make it standalone as well:
 ```js
@@ -29,7 +28,6 @@ While migrating to standalone components, they can also be imported in a module 
 
 Similarly, to use non-standalone components or directives in standalone ones, they must also be imported.
 
----
 ## Standalone Root Component
 The root component `AppComponent` is special. To make it standalone, we also have to change our bootstrapping in `main.ts` code to  use a component instead of a module to start the app:
 ```js
@@ -63,7 +61,6 @@ Any conponent using routing features, such as `router-outlet` or `routerLink` mu
 
 The `AppModule` is now longer required at this point.
 
----
 ## Lazy Loading with Standalone Components
 Lazy Loading for standalone components can simply be enabled by using the `loadComponent` property and passing a loading function to it similarly to the `loadChildren` function (see [Lazy Loading](./modules.md#lazy-loading) for more details):
 ```js
@@ -102,7 +99,6 @@ const usersRoutes: Route[] = [
 ]
 ```
 
----
 ## Standalone Directives and Pipes
 Directives and Pipes can be made standalone in the same way:
 ```js

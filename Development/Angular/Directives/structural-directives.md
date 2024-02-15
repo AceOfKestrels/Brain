@@ -18,7 +18,6 @@ Alternatively, `@if` can be used around the element(s) to show or hide:
 <button (click)="show=!show">Toggle text<button>
 ```
 
----
 ## `ngFor`
 `ngFor` can be used to iterate over a collection and display an element for each of them. `$index` can be used to access the index of the current iteration:
 ```html

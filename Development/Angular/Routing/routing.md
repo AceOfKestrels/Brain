@@ -5,7 +5,6 @@ Routing describes the process of simulating different URLs to your client browse
 
 We use Angular to build single-page-applications. Loading different pages would go against that goal.
 
----
 ## Defining Routes
 - Add a `RouterModule` (from `@angular/router`) to the `imports` section of the app module (`app.module.ts`).
 - Add `.forRoot` to this module and pass in a `Routes` array.
@@ -15,13 +14,11 @@ The above can also be put in a [separate module](#routing-as-a-separate-module)
 
 - Add a `<router-outlet></router-outlet>` element to the place where the component should get displayed, such as your main app component.
 
----
 ## Setting up the Routes array
 - Create a property of type `Routes`, which is an array of Route objects
 - Start with the `path` property. This is a string with the path of this route, *without* a leadings slash.
 - Then add a component to display at this route using the `component` property. This is an Angular component class.
 
----
 ## Routing as a separate module
 We can put both the `Routes` array as well as the `RouterModule` import into a separate module. Both can be removed from the app module.
 
@@ -38,7 +35,6 @@ const routes: Routes = [
 export class AppRoutingModule {}
 ```
 
----
 ## Redirecting
 We can redirect a route to a different one using the `redirectTo` property:
 ```js
@@ -49,7 +45,6 @@ const routes: Routes = [
 ```
 In this example `[domain]/home` will automatically redirect to the root page.
 
----
 ## Path Matching
 By default, route paths are matched by *prefix*. This means that a URL will match a route as long as it *starts* with the path specified:
 ```js
@@ -77,7 +72,6 @@ const routes: Routes = [
 ```
 In this example any path that is not the root path will redirect to `[domain]/not-found`
 
----
 ## Example `app-routing.module.ts`
 ```js
 const routes: Routes = [
@@ -100,7 +94,6 @@ const routes: Routes = [
 export class AppRoutingModule {}
 ```
 
----
 ## Read on
 - [Location Strategies](location-strategy.md)
 - [Linking to Routes](basic-linking.md)

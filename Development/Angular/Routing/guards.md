@@ -17,7 +17,6 @@ const routes: Routes = [
 ```
 `/users` can only be accessed if the `authGuard` function returns true (which it won't in this example since it always returns false).
 
----
 ## Guarding Children
 The `canActivateChild` property can be used in the same way as `canActivate` to protect *only* the child routes of the route it is applied it:
 ```js
@@ -39,6 +38,5 @@ const routes: Routes = [
 ```
 This guard will protect `/users/:id/details` and `/users/:id/details`, but *not* `/users/:id/.`
 
----
 ## See also
 - [Child Routes](child-routing.md)

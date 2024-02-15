@@ -27,7 +27,6 @@ To access signal values, call the property as a function:
 <p>Current count is: {{ count() }}</p>
 ```
 
----
 ## Computed Values
 We can use the `computed` function up update the value of a proeprty whenever a signal is updated:
 ```js
@@ -39,7 +38,6 @@ It can then be used just like a signal:
 <p>{{ message() }}</p>
 ```
 
----
 ## Effects
 Effects can be used to run code whenever a signal changes:
 ```js

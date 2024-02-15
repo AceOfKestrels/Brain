@@ -75,7 +75,6 @@ ngOnDestroy() { // Unsubscribing when the component is destroyed
 ```
 When an observable completes or returns an error it doesn't need to be unsubscribed from.
 
----
 ## Creating an Observable
 A new observable can simply be created using the `new` keyword. Its constructor takes a function defining the observable's behavior:
 ```js
@@ -95,7 +94,6 @@ new Observable( observer => {
 ```
 This will create a new observable that counts up every second and returns the time it has been running. If the `error` property is true it returns an error, and if the `complete` property is true it completes.
 
----
 ## Subjects
 Subjects are a special kind of observable. While observables wrap another event source (such as the `setInterval` in the previous example), subjects can be triggered from the outside by calling `next` on them:
 ```js
@@ -139,7 +137,6 @@ ngOnInit() {
 ```
 On subscription, the defined function will immediately be called as if `next` was used.
  
----
 ## RxJS
 Observables are part of the `RxJS` package. If it is not installed already, use the following command to install it:
 ```

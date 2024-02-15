@@ -30,7 +30,6 @@ And then the new directive can simply be applied to any element:
 <h1 appHighlight>Text with green highlighting</h1>
 ```
 
----
 ## Changing the Host Element
 It is not a good idea to access the element directly. Instead we can inject a `Renderer2` to change the appearance of the parent element:
 ```js
@@ -58,7 +57,6 @@ export class HighlightDirective implements OnInit {
 ```
 Of course the renderer can do more than just change the style of an element.
 
----
 ## Listening to Events
 The `@HostListener` decorator can be used to listen to events occurring on the host element:
 ```js
@@ -80,7 +78,6 @@ export class HighlightDirective implements OnInit {
 }
 ```
 
----
 ## Binding to Host Properties
 The `@HostBinding` decorator can be used to access properties of the host element:
 ```js
@@ -103,7 +100,6 @@ export class HighlightDirective implements OnInit {
 }
 ```
 
----
 ## Binding to Directive Properties
 Similarly to [property binding on components](../Basics/databinding.md#property-binding) we use `@Input` to declare a property to be accessible from the outside:
 ```js
@@ -139,7 +135,6 @@ export class HighlightDirective implements OnInit {
 ```
 We saw this when using [`ngClass` or `ngStyle`](./attribute-directives.md).
 
----
 ## Creating Structural Directives
 Using `TemplateRef` and `ViewContainerRef` we can add or remove elements in directives.
 First we want to inject those in the constructor:

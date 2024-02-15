@@ -14,7 +14,6 @@ const routes: Routes = [
 ];
 ```
 
----
 ## Passing Dynamic Data
 Passing dynamic data to routes workes similarly to [Guards](guards.md). A map of functions that fetche the data can be passed to the `resolve` property:
 ```js
@@ -33,7 +32,6 @@ const routes: Routes = [
 ];
 ```
 
----
 ## Retrieving Data
 Data can be retrievt similarly to [Route Parameters](route-parameters.md). To do this, we can use the `snapshot.data` property or subscribe to the `data` observable to react when it is updated:
 ```js

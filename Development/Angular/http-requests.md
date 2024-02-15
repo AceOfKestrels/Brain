@@ -25,7 +25,6 @@ post(item: { id: string, name: string }) {
 ```
 The observable will automatically complete when a response is received.
 
----
 ## Handling Errors
 HTTP Requests might fail for a varietey of reasons. To enhance the user experience, we should react to those errors.
 
@@ -61,7 +60,6 @@ get(id: int) : Observable<UserData> {
 }
 ```
 
----
 ## Headers and Query Parameters
 All request methods on the `HttpClient` also take configurations to the reqeust as another parameter. Here, headers, query params and other things can be set:
 ```js
@@ -77,7 +75,6 @@ get(item: { id: string, name: string }) {
 }
 ```
 
----
 ## Interceptors
 Interceptors can be used to run code just before an HTTP request is sent. They should be put in a separate service class that inplements the `HttpInterceptor` interface:
 ```js
@@ -125,6 +122,5 @@ export class ResponseLoggerInterceptorService implements HttpInterceptor {
 }
 ```
 
----
 ## Read on
 Read [Authentication](./authentication.md) to see how we might use HTTP requests for authentication with a backend server.

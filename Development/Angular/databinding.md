@@ -7,7 +7,6 @@ String Interpolation allows you to fill in a string from a field or expression. 
 <h1>Hello, {{ userName }}</h1>
 ```
 
----
 ## Property Binding
 Property Binding is used to bind the value of an attribute or property to a TypeScript expression. It is used using square brackets:
 ```html
@@ -32,7 +31,6 @@ export class HomeComponent {
 The value assiged in our component code will be the default value if no other value is passed by the parent.
 Optionally, the `@Input` decorator accepts a string as an argument, which will be the alias that will be used to bind to this property instead of the property name.
 
----
 ## Event Binding
 Event Binding is used to react to user input or other kinds of events. It is used using regular paranthesis:
 ```html
@@ -92,7 +90,6 @@ export class HomeComponent {
 ```
 If the `EventEmitter` has a generic type that is not `void` an object of that type must be passed to `emit`.
 
----
 ## Two-Way-Binding
 Two-way-binding can be used to bind the value of an input field to a property. When one of them changes the other is updated accordingly. 
 This requires the `FormsModule` to be imported in the `AppModule`. For more information on the `FormsModule` see [Forms](../Forms/index.md).
@@ -104,7 +101,6 @@ Two-way-binding can be used using both paranthesis and square brackets, and the 
 inputValue: string = "";
 ```
 
----
 ## Local References
 Local References can be used to get access to an object representing an element. I can be used with the `#` symbol:
 ```html
@@ -123,7 +119,6 @@ export class HomeComponent {
 ```
 To access the element itself from this, use the `nativeElement` property on it.
 
----
 ## Content Projection
 Normally anything between the opening and closing tags of a component is lost. To change this behavior, simply add a `ng-content` directive to the template:
 ```html

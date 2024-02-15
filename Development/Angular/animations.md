@@ -30,7 +30,6 @@ animations: [
 ]
 ```
 
----
 ## States
 Animations use "states" to determine the stlye an element should be displayed in. We bind the name of the state to the trigger name we defined earlier:
 ```html
@@ -58,7 +57,6 @@ animations: [
 ```
 Now, when changing the `state` property accordingly, the styles with switch between the two.
 
----
 ## Transitions
 Using the `transition` method we can then create an animation between the two states.
 As a first argument this method takes the states it should play between. In the second argument it is defined how the animation should look like. This can use intermediate style, but by default takes the animation duration in ms:
@@ -97,7 +95,6 @@ animations: [
 ]
 ```
 
----
 ## The `void` State
 The `void` state can be used to add animations when an element is being removed or added:
 ```js
@@ -112,9 +109,8 @@ animations: [
 ]
 ```
 
----
 ## Callbacks
-We can listen di different events that get called when an animation starts or finishes:
+We can listen to different events that get called when an animation starts or finishes:
 ```html
 <div 
     style="width: 100px; height: 100px" 

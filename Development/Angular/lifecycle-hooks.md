@@ -40,7 +40,6 @@ export class HomeComponent implements OnChanges {
 }
 ```
 
----
 ## Component Lifecycle
 The available Lifecycle Hooks are the following:
 

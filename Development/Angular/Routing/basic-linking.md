@@ -16,7 +16,6 @@ Alternatively, Property Binding can be used to bind an array of route segments t
 ```
 This is useful for some more advanced use cases.
 
----
 ## Relative vs Absolute Paths in Router Links
 
 ### Absolute Paths
@@ -35,7 +34,6 @@ Using `./` or `../` in a router link we can navigate similarly to a direcctory s
 
 Note that using `../` to navigate up one level will not just remove one segment of the path, but the entire path of the component the link is in. (see [Relative Path Example 2](#relative-paths-example-2))
 
----
 ## Router Link Presentation
 The `routerLinkActive` directive can be used to add css classes to an element with a Router Link, if the link's path is currently active:
 ```html
@@ -58,11 +56,9 @@ This behavior can be changed by binding to the `routerLinkActiveOptions` propert
 >Users</button>
 ```
 
----
 ## Passing Query Parameters and Fragmets
 See [Query Parameters and Fragments](query-parameters-fragments.md#in-router-links)
 
----
 ## Examples
 
 Routes in `app.module.ts` for [Absolute Path](#absolute-path-example) and [Relative Path Example 1](#relative-paths-example-1)
