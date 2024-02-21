@@ -116,7 +116,6 @@ ngOnInit() {
     );
 }
 ```
-Subjects work similarly to event emitters, but are generally preferred over them.
 
 Subjects should also be unsubscribed from:
 ```js
@@ -135,7 +134,7 @@ ngOnInit() {
     subject.subscribe( value => console.log(value) )
 }
 ```
-On subscription, the defined function will immediately be called as if `next` was used.
+On subscription, current value will be emitted as if `next` was called.
  
 ## RxJS
 Observables are part of the `RxJS` package. If it is not installed already, use the following command to install it:
