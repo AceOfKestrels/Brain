@@ -6,7 +6,7 @@ First the `ReactiveFormsModule` must be imported in the app module:
 ```js
 imports: [ ReactiveFormsModule ]
 ```
-In the component TypeScrit file, create a property of type `FormGroup` for the object:
+In the component TypeScript file, create a property of type `FormGroup` for the object:
 ```js
 form: FormGroup;
 ```

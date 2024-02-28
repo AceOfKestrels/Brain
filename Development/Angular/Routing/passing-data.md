@@ -1,5 +1,5 @@
 # Passing Data to Routes
-We can pass data to routes, either statically (always the same data) or dynamically.
+We can pass data to routes, either statically or dynamically.
 
 ## Passing Static Data
 To pass static data we can use the `data` property of the route. This takes an object containing all the data:
@@ -15,11 +15,11 @@ const routes: Routes = [
 ```
 
 ## Passing Dynamic Data
-Passing dynamic data to routes workes similarly to [Guards](guards.md). A map of functions that fetche the data can be passed to the `resolve` property:
+Passing dynamic data to routes workes similarly to [Guards](guards.md). A map of functions that fetch the data can be passed to the `resolve` property:
 ```js
 // Resolver Function
 const getUser = () => {
-    return false;
+    return null;
 };
 
 const routes: Routes = [

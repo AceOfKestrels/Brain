@@ -1,10 +1,12 @@
 # Query Parameters and Fragments
 Query Parameters (`?someParam=value`) and Fragments (`#something`) can be passed via router links or programmatic navigation, and accessed by components.
 
-## In Router Links
-Query Parameters and Fragments can be passed in addition to the path using the `queryParams` and `fragment` properties respectively.
+Both in Router Links and when using Programmatic Navigation, Query Parameters and Fragments can be passed in addition to the path using the `queryParams` and `fragment` properties respectively.
 `queryParams` takes an object of key-value-pairs defining the parameters and their values. 
-Since only one fragmet may be passed, `fragment` is simply set to its value. Property binding is *not* required for fragments.
+Since only one fragmet may be passed, `fragment` is simply set to its value.
+
+## In Router Links
+Property binding is *not* required for fragments.
 ```html
 <a 
     routerLink="/users"
@@ -15,9 +17,6 @@ Since only one fragmet may be passed, `fragment` is simply set to its value. Pro
 This link will load `[domain]/users?listAll=true#userList`.
 
 ## Through Programmatic Navigation
-Query Parameters and Fragments can be passed in addition to the path using the `queryParams` and `fragment` properties respectively.
-`queryParams` takes an object of key-value-pairs defining the parameters and their values. 
-Since only one fragmet may be passed, `fragment` is simply set to its value.
 ```js
 listAllUsers() {
     this.router.navigate( 
@@ -39,12 +38,7 @@ To preserve query parameters, set the `queryParamsHandling` property to `"preser
 ```
 ```js
 editUser() {
-    this.router.navigate(
-        ["/users/edit"],
-        {
-            queryParamsHandling: "preserve"
-        }
-    )
+    this.router.navigate( ["/users/edit"], { queryParamsHandling: "preserve" } )
 }
 ```
 

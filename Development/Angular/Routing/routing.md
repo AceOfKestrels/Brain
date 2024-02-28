@@ -125,3 +125,4 @@ export class AppRoutingModule {}
 - [Route Parameters](route-parameters.md)
 - [Query Parameters and Fragments](query-parameters-fragments.md)
 - [Passing Data](passing-data.md)
+- [Lazy Loading](../modules.md#lazy-loading)

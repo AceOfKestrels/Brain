@@ -28,7 +28,7 @@ To access signal values, call the property as a function:
 ```
 
 ## Computed Values
-We can use the `computed` function up update the value of a proeprty whenever a signal is updated:
+We can use the `computed` function up update the value of a property whenever a signal is updated:
 ```js
 counter = signal(1);
 message = computed( () => "Current count is: " + couter() );

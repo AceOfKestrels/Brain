@@ -1,5 +1,5 @@
 # Model Binding
-Link we have seen in [databinding](../../Basics/databinding.md) we can bind to the `ngModel` property.
+Like we have seen in [databinding](../../Basics/databinding.md) we can bind to the `ngModel` property.
 
 ## Default Values
 We can use one-way-binding to set a default value for form fields:

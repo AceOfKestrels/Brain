@@ -111,12 +111,12 @@ export class AuthInterceptorService implements HttpInterceptor {
 ```
 
 ### Intercepting Responses
-Interceptors can also be used to interact with and modify the response of a request using the `pipe` method:
+Interceptors can also be used to interact with and modify the response of a request using the `pipe` and `tap` methods:
 ```js
 export class ResponseLoggerInterceptorService implements HttpInterceptor {
     intercept( req: HttpRequest<any>, next: HttpHandler) {
         return next.handle(req).pipe(
-            tep( event => console.log(event) )
+            tap( event => console.log(event) )
         );
     }
 }
