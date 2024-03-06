@@ -36,7 +36,6 @@ ngOnInit() {
     );
 }
 ```
-The function passed here will *not* be called when the component is first initialized, so the snapshot should be used to set the values initially.
 
 ## Query Parameters And Fragments
 See [Query Parameters and Fragments](query-parameters-fragments.md#retrieving-query-parameters-and-fragments)
