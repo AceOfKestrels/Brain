@@ -91,7 +91,8 @@ public User? GetUser(int id)
 }
 ```
 
-### Modifying the Database
+<br>
+
 When changing entries in the database (including adding, removing or editing entries), make sure to call `DbContext.SaveChanges` to actually save the changes to the database:
 ```cs
 public bool RemoveUser(int id) 
@@ -139,4 +140,44 @@ public void TestAddUser() {
 
     Console.WriteLine(user.Id is not null);
 }
+```
+
+### Updating existing entries
+Entity Framework tracks changes to properties of entries, so updating an entry can be as easy as changing its property values:
+```cs
+public void UpdateUser(User newUser) {
+    User oldUser = _dbContext.Users.Find(newUser.Id);
+    if(oldUser is null) {
+        return;
+    }
+
+    oldUser.Name = newUser.Name;
+    oldUser.Email = newUser.Email;
+    _dbContext.SaveChanges();
+}
+```
+
+<br>
+
+Alternatively, all properties can be updated automatically, by retrieving a tracked entity:
+```cs
+public void UpdateUser(User newUser) {
+    User oldUser = _dbContext.Users.Find(newUser.Id);
+    if(oldUser is null) {
+        return;
+    }
+
+    _dbContext.Users.Entry(oldUser).CurrentValue.SetValues(newUser);
+    _dbContext.SaveChanges();
+}
+```
+When doing this, make sure the ID of the original and modified entry are the same.
+
+## Modifying the Database
+When making changes to the model or adding new tables to the database in code, it is necessary to update the database accordingly again before it will work.
+
+To do so, add a new migration and update the database, just like [creating it originally](#code-first-migration):
+```
+dotnet ef migrations add UpdateUserModel
+dotnet ef database update
 ```
