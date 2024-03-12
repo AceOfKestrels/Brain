@@ -83,10 +83,60 @@ public UserService(UserContext dbContext)
 
 <br>
 
-Using that the database table can be accessed like any list. Make sure to use the async versions of the respective methods:
+Using that the database table can be accessed similary to a list:
 ```cs
-public async Task<IEnumerable<User>> GetUsers()
+public User? GetUser(int id)
 {
-    return await _dbContext.Users.ToListAsync();
+    return _dbContext.Users.Find(id);
+}
+```
+
+### Modifying the Database
+When changing entries in the database (including adding, removing or editing entries), make sure to call `DbContext.SaveChanges` to actually save the changes to the database:
+```cs
+public bool RemoveUser(int id) 
+{
+    User user = _dbContext.Users.Find(userId);
+
+    if(user is null) {
+        return false;
+    }
+
+    _dbContext.Users.Remove(user);
+    _dbContext.SaveChanges();
+}
+```
+
+### Adding new entries
+Entity Framework automatically generates values for ID properties.
+
+Make sure to unset the ID of entries you add beforehand:
+```cs
+public void AddUser(User newUser) {
+    newUser.Id = null;
+    _dbContext.Users.Add(newUser);
+    _dbContext.SaveChanges();
+}
+```
+
+<br>
+
+The original object will be updated with the new ID:
+```cs
+public User AddUser(User newUser) {
+    newUser.Id = null;
+    _dbContext.Users.Add(newUser);
+    _dbContext.SaveChanges();
+
+    return newUser;
+}
+
+public void TestAddUser() {
+    User user = AddUser( new() {
+        Name: "Kes",
+        Email: "kes@test.com"
+    });
+
+    Console.WriteLine(user.Id is not null);
 }
 ```
