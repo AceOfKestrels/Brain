@@ -7,6 +7,8 @@
 > 
 > *([Microsoft Learn](https://learn.microsoft.com/en-us/ef/core/))*
 
+Entity Framework supports a variety of database providers. It supplies different accessor methods similar to a list and automatically translates them to access the database it is connected to.
+
 ## Setup
 Run `dotnet tool install --global dotnet-ef` to install Entity Framework.
 
@@ -17,8 +19,8 @@ In addition, `Microsoft.EntityFrameworkCore.Tools` and `Microsoft.EntityFramewor
 The following examples will use [SQLExpress](https://www.microsoft.com/de-de/sql-server/sql-server-downloads), which needs to be installed separately. 
 The NuGet package we need for this provider is `Microsoft.EntityFrameworkCore.SqlServer`. This needs to be added to the project.
 
-### DbContext
-Now, the `DbContext` class can be inherited to create an instance representing a session with a database:
+### Database Context
+The `DbContext` class represents a session with a database. To tell Entity Framework which table to access we can inherit the class.
 ```cs
 public class UserContext: DbContext
 {
@@ -27,7 +29,7 @@ public class UserContext: DbContext
     public DbSet<User> Users { get; set; }
 }
 ```
-The `DbSet` represents the databse table.
+The `DbSet` represents the databse table and can later be used to access it.
 
 ### Connection String
 In the `appsettings.json` set up the connection string for the database. This will depend on the databse provider used.
@@ -41,7 +43,7 @@ In the `appsettings.json` set up the connection string for the database. This wi
 ```
 
 ### Add the Service
-To inject the `DbContext` into other classes it has to be added as a service in the `Program.cs`. Again, the method to call will depend on the database provider.
+To inject the `DbContext` into other classes it has to be added as a service in the `Program.cs`. Again, the method to call to set up the options will depend on the database provider.
 ```cs
 builder.Services.AddDbContext<UserContext>( options =>
 {
@@ -50,7 +52,9 @@ builder.Services.AddDbContext<UserContext>( options =>
 ```
 
 ### Code-First-Migration
-To create the database and add representations of our models, a new migration must first be created. To do this run `dotnet ef migrations add` in the project directory. The name of the migration should be unique:
+We have created the model for our database first in code (as opposed to creating the database first), so now we can use Entity Framework to automatically create the database for us.
+
+To do this, a new migration must first be created. To do this run `dotnet ef migrations add` in the project directory. The name of the migration should be unique:
 ```
 dotnet ef migrations add CreateInitial
 ```
@@ -61,6 +65,10 @@ Then run `dotnet ef database update` to create the database:
 ```
 dotnet ef database update
 ```
+
+<br>
+
+These steps are the same in case we want to add another table or change an existing model
 
 ## Accessing the Database
 Now the `DbContext` can be injected into any class to access the database:
