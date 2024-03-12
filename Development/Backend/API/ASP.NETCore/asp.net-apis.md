@@ -1,4 +1,4 @@
-# APIs using ASP\.NET Core
+# Web APIs using ASP\.NET Core
 
 RESTful APIs can be created using the ASP\.NET Core framework in C#.
 
@@ -26,16 +26,17 @@ public class UserController: ControllerBase
 }
 ```
 
-## HTTP Response Methods
+## HTTP Action Methods
 In this class the methods reacting to incoming HTTP requests are defined. 
-They should return an `ActionResult` result with the generic type being the model the response should return. The methods can also be declared as asynchrounous, in which case they should return `Task<ActionResult>`
+They should return an `ActionResult` result with the generic type being the model the response should return. The methods can also be declared as asynchronous if they involve any async calls, in which case they should return `Task<ActionResult>`.
+
 They are decorated with attributes such as `HttpGet` or `HttpPut`. Another route *after* the controller's path can be defined either as an argument to this attribute or again using a separate `Route` attribute:
 ```cs
 [ApiController]
 [Route("users")]
 public class UserController: ControllerBase
 {
-    [HttpGet]
+    [HttpGet("list")] // /users/list
     public async Task<ActionResult<IEnumerable<User>>> GetUsers() {
         return Ok(_userService.Users);
     }
@@ -49,7 +50,7 @@ Route parameters can be defined using curly brackets. They will be available as 
 [Route("users")]
 public class UserController: ControllerBase
 {
-    [HttpGet("{id}")]
+    [HttpGet("{id}")] // /users/{id} e.g. /users/1  /users/5  etc.
     public async Task<ActionResult<User>> GetUser(int id) {
         return Ok(_userService.GetUser(id));
     }
