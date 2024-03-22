@@ -28,8 +28,8 @@ After the project has been create, use the `ng serve` command in the newly creat
 In the `src/environment` folder, you can create two files, `environment.ts` and `environment.prod.ts` export a constant `environment`. These contain enironment variables in the form of key-value-pairs for development and production mode respectively. You can add your own variables here and use them throughout your application simply by importing them:
 ```js
 export const environment = {
-    production = false,
-    apiKey = "abcde"
+    production: false,
+    apiKey: "abcde"
 }
 ```
 ```js
