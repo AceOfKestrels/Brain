@@ -1,4 +1,4 @@
 This is my brain. Say hello.
 
 Content:
-- [Angular](./Development/Angular/Basics/angular.md)
+- [Angular](./Development/Frontend/Web/Angular/angular.md)
