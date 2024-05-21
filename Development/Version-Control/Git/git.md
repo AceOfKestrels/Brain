@@ -1,8 +1,7 @@
 # Git
-... write something about git. this will mostly serve as a landing page for git related articles
+Git is a version control system used by many developers. 
 
 ## Read On
 - Common Commands
 - Branches
-- Rebasing
-- Remotes
+- [Rebasing](./rebasing.md)
