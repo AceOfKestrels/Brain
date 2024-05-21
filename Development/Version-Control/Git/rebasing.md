@@ -11,3 +11,10 @@ Select the last three commits:
 ```bash
 git rebase -i HEAD~3
 ```
+
+### Editing Previous Commits
+By selecting the `edit` option during interactive rebase it is possible to easily edit previous commits. Changes commited with the `--amend` option will be added to the commit.
+```bash
+git commit --amend --no-edit
+```
+Beware of merge conflicts when editing files that are being modified in a future commit.
