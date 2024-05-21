@@ -1,8 +1,10 @@
 # CSS - Cascading Style Sheets
-From [mdn web docs: CSS](https://developer.mozilla.org/en-US/docs/Web/CSS):
-CSS is a stylesheet language used to describe the presentation of documents written is HTML or XML. 
 
-CSS is part of the core specifications of the open web and is standardized across web browsers.
+> CSS is a stylesheet language used to describe the presentation of documents written is HTML or XML. 
+> CSS is part of the core specifications of the open web and is standardized across web browsers.
+>
+> *[mdn web docs](https://developer.mozilla.org/en-US/docs/Web/CSS)*
+
 
 ## Styles
 CSS styles can be applied as inline styles using the `style` property on any HTML element:
