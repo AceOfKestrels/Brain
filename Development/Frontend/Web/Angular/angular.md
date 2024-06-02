@@ -15,13 +15,8 @@ With the CLI installed you can open a command prompt or terminal in the folder y
 ```
 ng new [project name] --no-strict --standalone false --ssr
 ```
-The `--no-strict` flag will make our lives a bit easier, but strict mode is required for some additional optimizations.
 
-The `--standalone false` flag creates the project with an app module and non-standalone app component. Remove it if you wish to only use [standalone components](./standalone-components.md).
-
-The `--ssr` configures the application to use [server side rendering](./server-side-rendering.md) for the first view of the page.
-
-After the project has been create, use the `ng serve` command in the newly created folder to start up the project in development mode.
+After the project has been created, use the `ng serve` command in the newly created folder to start up the project in development mode.
 
 
 ## Using environment variables
