@@ -53,3 +53,6 @@ $ go mod edit -replace example/greetings=../greetings
 The above will update the module to use the local module located at `../greetings` in place of the `example/greetings` package.
 
 Afterwards, use `go mod tidy` like normal to resolve the dependency.
+
+## Read on
+- [Errors](./errors.md)
