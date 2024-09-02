@@ -56,3 +56,7 @@ Afterwards, use `go mod tidy` like normal to resolve the dependency.
 
 ## Read on
 - [Errors](./errors.md)
+- [Syntax](./syntax.md)
+- [Structs](./structs.md)
+- [Interfaces](./interfaces.md)
+- [Testing](./testing.md)
