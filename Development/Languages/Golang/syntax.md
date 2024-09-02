@@ -2,15 +2,20 @@
 
 ## If Statements
 ```go
-if CONDITION {
+if i == 0 {
     // ...
 }
 ```
 
-## Slices
-Slices are like lists
+## Collections
+Slices are like lists:
 ```go
 greetings := []string{"Hello", "Goo morning", "Welcome"}
+```
+Maps:
+```go
+messages := make(map[string]string)
+messages["Kes"] = "Hello, Kes"
 ```
 
 ## Loops
@@ -29,6 +34,20 @@ for i < 10 {
 Infinite loop:
 ```go
 for {
+    // ...
+}
+```
+For in range:
+```go
+for index, greeting := range greetings {
+    // ...
+}
+
+for index := range greetings {
+    greeting := greetings[index]
+}
+
+for _, greeting := range greetings {
     // ...
 }
 ```
