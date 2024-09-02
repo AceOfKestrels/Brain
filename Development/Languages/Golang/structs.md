@@ -49,16 +49,12 @@ Constructor methods should return a pointer to the newly created instance, as de
 ## Methods
 Functions are turned to methods and added to a struct by using so-called "receiver arguments". They come before the function name and are a reference to the instance of the struct they belong to. You may think of them as the `this` keyword in other languages, however naming it that way is discouraged:
 ```go
-package service
+type FooBarServiceImpl struct{}
 
-import "example/models"
-
-type ExampleServiceImpl struct{}
-
-func (serv *ExampleServiceImpl) GetFoo() (models.Foo) {
+func (serv *FooBarServiceImpl) GetFoo() (models.Foo) {
     // ...
 }
-func (serv *ExampleServiceImpl) AddFoo(foo models.Foo) (models.Foo, error) {
+func (serv *FooBarServiceImpl) AddFoo(foo models.Foo) (models.Foo, error) {
     // ...
 }
 ```
