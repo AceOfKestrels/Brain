@@ -60,3 +60,4 @@ Afterwards, use `go mod tidy` like normal to resolve the dependency.
 - [Structs](./structs.md)
 - [Interfaces](./interfaces.md)
 - [Testing](./testing.md)
+- [Web APIs](./web-api/gin.md)
