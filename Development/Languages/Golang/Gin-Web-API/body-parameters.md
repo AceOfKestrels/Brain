@@ -22,6 +22,7 @@ func GetFoo(c *gin.Context) {
     foo, error := fooService.Get(id)
     if error != nil {
         c.AbortWithError(http.StatusBadRequest, error)
+        return
     }
 
     c.JSON(http.StatusOK, foo)
@@ -38,6 +39,7 @@ func GetBars(c *gin.Context) {
     bar, error := barService.GetBars(filterString, page)
     if error != nil {
         c.AbortWithError(http.StatusBadRequest, error)
+        return
     }
 
     c.JSON(http.StatusOK, bars)
@@ -62,11 +64,13 @@ func PostFoo(c *gin.Context) {
 
     if error != nil {
         c.AbortWithError(http.StatusBadRequest, error)
+        return
     }
 
     added, error := fooService.Add(foo)
     if error != nil {
         c.AbortWithError(http.StatusBadRequest, error)
+        return
     }
 
     c.IndentedJSON(http.StatusOK, added)
