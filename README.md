@@ -1,3 +1,5 @@
+# Kestrels-Wiki
+
 ### This is my brain. Say hello.
 
 ## Featured Content:
@@ -6,3 +8,7 @@
 
 ## New Pages:
 - [Golang](./Development/Languages/Golang/golang.md)
+
+## Contribution:
+- Create a fork of this repository
+- Follow the [styling guide](./Meta/styling-guide.md)
