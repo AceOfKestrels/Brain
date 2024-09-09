@@ -24,7 +24,6 @@ func (Foo) Fields() []ent.Field {
 func (Foo) Edges() []ent.Edge {
     return nil
 }
-
 ```
 
 Then you can add the fields to the schema:
@@ -130,3 +129,4 @@ func (ctrl *fooController) GetFoos(c *gin.Context) {
 
 ## Read on
 - [Ent Documentation](https://entgo.io/docs/getting-started)
+- [Edges](./edges.md)
