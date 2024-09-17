@@ -46,7 +46,8 @@ We use a client to connect to the database. How this works exactly will depend o
 
 For SQLite:
 ```go
-import _ "github.com/xiaoqidun/entps"
+import _ "github.com/ncruces/go-sqlite3/driver"
+import _ "github.com/ncruces/go-sqlite3/embed"
 
 func main() {
     client, error := ent.Open("sqlite3", "file:./data.db")
@@ -56,6 +57,7 @@ func main() {
     defer client.Close()
 }
 ```
+The sqlite driver recommended by the Ent developers requires CGo to be enabled, hurting compilation performance and cross-plattform compatibility. The one used in the above example is a CGo-free implementation.
 
 Regardless of database, you can run the auto migration tool to create the database from your schemas:
 ```go
