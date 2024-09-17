@@ -38,8 +38,17 @@ func (Foo) Fields() []ent.Field {
 
 Then run `go generate` from the root directory:
 ```
-go generate ./ent
+go run -mod=mod entgo.io/ent/cmd/ent generate ./ent/schema/
 ```
+Ent will also generate a `generate.go` file with that command.
+
+### Changing the Ent directory
+You can use the `--target` parameter to specify a different path when generating your schemas:
+```
+go run -mod=mod entgo.io/ent/cmd/ent new --target internal/database/ent/schema <SchemaName>
+```
+The `generate.go` file will not be created when using the `--target` parameter. You must create it manually or run the command yourself. 
+
 
 ## Connecting to the Database
 We use a client to connect to the database. How this works exactly will depend on the database.
@@ -50,7 +59,7 @@ import _ "github.com/ncruces/go-sqlite3/driver"
 import _ "github.com/ncruces/go-sqlite3/embed"
 
 func main() {
-    client, error := ent.Open("sqlite3", "file:./data.db")
+    client, err := ent.Open("sqlite3", "file:./data.db")
     if err != nil {
         // handle error
     }
