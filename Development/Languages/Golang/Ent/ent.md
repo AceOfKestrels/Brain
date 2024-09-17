@@ -36,11 +36,13 @@ func (Foo) Fields() []ent.Field {
 }
 ```
 
-Then run `go generate` from the root directory:
+Then run the following command from the root directory to generate the rest of the files according to your schemas:
 ```
 go run -mod=mod entgo.io/ent/cmd/ent generate ./ent/schema/
 ```
-Ent will also generate a `generate.go` file with that command.
+Ent will also create a `generate.go` file with that command.
+
+The generator needs to be run any time a schema is updated.
 
 ### Changing the Ent directory
 You can use the `--target` parameter to specify a different path when generating your schemas:
