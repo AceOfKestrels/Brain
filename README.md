@@ -3,18 +3,18 @@
 ### This is my brain. Say hello.
 **[`Kestrel's Nest`](https://kestrelsnest.gg) &nbsp;-&nbsp; [`Wiki`](https://wiki.kestrelsnest.gg) &nbsp;-&nbsp; [`Discord`](https://discord.kestrelsnest.gg)**
 
-## Featured Content:
+## Featured Content
 - [Angular](./Development/Frontend/Web/Angular/angular.md)
 - [Entity Framework](./Development/Backend/Database/EntityFramework/entity-framework.md)
 
-## New Pages:
+## New Pages
 - [Golang](./Development/Languages/Golang/golang.md)
 
-## Contribution:
+## Contribution
 - Create a fork of this repository
 - Follow the [styling guide](./Meta/styling-guide.md)
 
-## Unfinished Articles:
+## Unfinished Articles
 - [Ent Edges](./Development/Languages/Golang/Ent/edges.md)
 - [CGo](./Development/Languages/Golang/cgo.md)
 - [Mutability](./Development/Concepts/mutability.md)
