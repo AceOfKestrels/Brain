@@ -15,7 +15,6 @@
 - Follow the [styling guide](./Meta/styling-guide.md)
 
 ## Unfinished Articles
-- [Ent Edges](./Development/Languages/Golang/Ent/edges.md)
 - [CGo](./Development/Languages/Golang/cgo.md)
 - [Mutability](./Development/Concepts/mutability.md)
 - [Testing](./Development/Concepts/Testing/testing.md)

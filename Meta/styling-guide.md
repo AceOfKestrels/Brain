@@ -14,6 +14,9 @@ Example Meta:
     "mirrorOf": "../README.md", 
     
     // Overrides the page title (normally generated from frist heading) 
-    "title": "Styling Guide"    
+    "title": "Styling Guide",
+
+    // Override the article's author (normally generated from the last commit's author)
+    "author": "Kes"
 }
 ```
