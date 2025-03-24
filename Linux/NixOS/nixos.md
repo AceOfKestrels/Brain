@@ -1,0 +1,2 @@
+# NixOS
+NixOS is a Linux distribution I am currently trying out. It differs from other distros by using a largely declarative, configuration-driven design. Because of this it comes with its own challenges that I will document under this section of the wiki.

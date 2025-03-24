@@ -1,0 +1,2 @@
+# Configration
+The `configuration.nix` located in `/etc/nixos/` is the most important config file in NixOS. It contains all configuration for the entire system, including settings and installed packages. Other configuration files can be imported here.
